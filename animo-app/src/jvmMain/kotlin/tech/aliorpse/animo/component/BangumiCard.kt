@@ -10,7 +10,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.painter.ColorPainter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -28,7 +27,6 @@ fun BangumiCard(model: Any?, title: String? = null, onClick: () -> Unit = {}) {
             AsyncImage(
                 model = model,
                 contentDescription = null,
-                placeholder = ColorPainter(Color.LightGray),
                 modifier = Modifier.fillMaxSize(),
                 contentScale = ContentScale.Crop
             )

@@ -8,7 +8,7 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
 import com.composables.icons.lucide.*
 import tech.aliorpse.animo.view.HomeView
-import tech.aliorpse.animo.view.ProfileView
+import tech.aliorpse.animo.view.CalendarView
 import tech.aliorpse.animo.view.SearchView
 import tech.aliorpse.animo.view.SettingsView
 
@@ -51,10 +51,10 @@ fun SideBar(
 }
 
 sealed class AnimoView(val label: String, val icon: ImageVector, val content: @Composable () -> Unit) {
-    object Home : AnimoView("Home", Lucide.House, ::HomeView)
-    object Profile : AnimoView("Profile", Lucide.User, ::ProfileView)
-    object Settings : AnimoView("Settings", Lucide.Settings, ::SettingsView)
-    object Search : AnimoView("Search", Lucide.Search, ::SearchView)
+    object Home : AnimoView("首页", Lucide.House, ::HomeView)
+    object Profile : AnimoView("新番时间表", Lucide.Calendar, ::CalendarView)
+    object Settings : AnimoView("设置", Lucide.Settings, ::SettingsView)
+    object Search : AnimoView("搜索", Lucide.Search, ::SearchView)
 
     companion object {
         val all by lazy { listOf(Home, Profile, Settings) }

@@ -14,6 +14,8 @@ kotlin {
         commonMain.dependencies {
             implementation(project(":backend"))
 
+            implementation(libs.kotlinx.datetime)
+
             implementation(libs.compose.runtime)
             implementation(libs.compose.foundation)
             implementation(libs.compose.ui)

@@ -6,14 +6,14 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import tech.aliorpse.animo.AnimoService
-import tech.aliorpse.animo.model.BangumiTrendingResponse
+import tech.aliorpse.animo.model.AniCalendarResponse
 
-class HomeViewModel : ViewModel() {
-    val trendingData = MutableStateFlow<List<BangumiTrendingResponse.Data>>(emptyList())
+class CalendarViewModel : ViewModel() {
+    val calendarData = MutableStateFlow<List<AniCalendarResponse.Season>>(emptyList())
 
     init {
         viewModelScope.launch {
-            trendingData.update { AnimoService.getTrending().data }
+            calendarData.update { AnimoService.getCalendar().data }
         }
     }
 }

@@ -1,5 +1,6 @@
-package tech.aliorpse.animo.bangumi.model
+package tech.aliorpse.animo.model
 
+import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
@@ -15,8 +16,8 @@ data class BangumiTrendingResponse(
         @Serializable
         data class Subject(
             val id: Int,
-            val name: String,
-            val nameCN: String,
+            @SerialName("name") val nameJa: String,
+            @SerialName("nameCN") val name: String,
             val type: Int,
             val info: String,
             val rating: Rating,

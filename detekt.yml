@@ -13,3 +13,7 @@ naming:
   FunctionNaming:
     active: true
     functionPattern: '^[a-zA-Z][a-zA-Z0-9]*'
+
+complexity:
+  LongMethod:
+    active: false
