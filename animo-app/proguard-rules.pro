@@ -1,0 +1,5 @@
+-keepattributes Signature, Annotation, InnerClasses
+-dontwarn io.ktor.**
+-keep class io.ktor.** { *; }
+-dontwarn org.slf4j.**
+-keep class org.slf4j.** { *; }
