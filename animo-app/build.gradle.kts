@@ -43,13 +43,13 @@ compose.desktop {
         mainClass = "tech.aliorpse.animo.AnimoAppKt"
 
         nativeDistributions {
-            targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
+            targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb, TargetFormat.Rpm)
             packageName = "tech.aliorpse.animo"
             packageVersion = "1.0.0"
         }
 
         buildTypes.release.proguard {
-            configurationFiles.from(project.file("proguard-rules.pro"))
+            isEnabled = false
         }
     }
 }

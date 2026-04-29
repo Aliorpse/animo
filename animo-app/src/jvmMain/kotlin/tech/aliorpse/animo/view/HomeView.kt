@@ -16,6 +16,7 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import tech.aliorpse.animo.component.BangumiCard
+import tech.aliorpse.animo.util.mouseScrolling
 import tech.aliorpse.animo.viewmodel.HomeViewModel
 
 @Composable
@@ -29,7 +30,7 @@ fun HomeView() {
         val trendingData by viewModel.trendingData.collectAsStateWithLifecycle()
 
         LazyRow(
-            Modifier.padding(vertical = 16.dp),
+            Modifier.padding(vertical = 16.dp).mouseScrolling(rowState),
             state = rowState,
             horizontalArrangement = Arrangement.spacedBy(12.dp)
         ) {
