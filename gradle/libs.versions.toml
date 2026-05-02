@@ -6,7 +6,7 @@ kotlinx-datetime = "0.8.0-rc02"
 
 androidx-lifecycle = "2.10.0"
 
-compose-hotReload = "1.0.0"
+compose-hotReload = "1.1.0"
 compose-multiplatform = "1.10.3"
 compose-material3 = "1.10.0-alpha05"
 
