@@ -7,7 +7,7 @@ kotlinx-datetime = "0.8.0-rc02-0.6.x-compat"
 androidx-lifecycle = "2.10.0"
 
 compose-hotReload = "1.1.0"
-compose-multiplatform = "1.10.3"
+compose-multiplatform = "1.11.0"
 compose-material3 = "1.11.0-alpha07"
 
 lucide = "2.2.1"
